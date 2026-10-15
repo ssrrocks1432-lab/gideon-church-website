@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gideon Pentecostu Prardhana Mandhiramu</title>
+<style>
+:root{--navy:#102849;--navy2:#183b66;--teal:#16b5a5;--orange:#f28c18;--paper:#f5f8fc;--ink:#172438}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Telugu",sans-serif;background:var(--paper);color:var(--ink)}
+header{background:var(--navy);color:white;padding:16px max(18px,calc((100% - 1100px)/2));display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.brand{display:flex;gap:12px;align-items:center}.logo{width:48px;height:48px;border-radius:12px;background:linear-gradient(135deg,var(--teal) 0 48%,var(--orange) 49%);display:grid;place-items:center;font-size:28px;color:white;font-weight:bold}
+.brand h1{font-size:16px;line-height:1.35;margin:0;max-width:470px}.brand small{display:block;font-weight:normal;opacity:.8;margin-top:3px}
+nav{display:flex;gap:8px;flex-wrap:wrap}button,.btn{border:0;border-radius:10px;padding:10px 14px;cursor:pointer;font-weight:700;text-decoration:none;display:inline-block}
+nav button{background:transparent;color:white}nav button:hover{background:#ffffff22}
+main{max-width:1100px;margin:auto;padding:24px 18px 50px}.hero{background:linear-gradient(120deg,#102849ee,#183b66e8),linear-gradient(45deg,var(--teal),var(--orange));color:white;padding:42px 28px;border-radius:22px;min-height:270px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.hero h2{font-size:clamp(28px,5vw,44px);margin:0 0 12px;max-width:650px}.hero p{line-height:1.7;max-width:620px}.btn-primary{background:var(--teal);color:#062b35}.btn-light{background:white;color:var(--navy)}.section-title{margin:30px 0 14px;font-size:23px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{background:white;border:1px solid #e1e8f1;border-radius:16px;padding:20px;box-shadow:0 4px 18px #1028490a}.card h3{margin:0 0 9px}.muted{color:#617087;line-height:1.6}.service{display:flex;gap:14px;align-items:center}.icon{width:44px;height:44px;display:grid;place-items:center;background:#e6f8f5;border-radius:12px;font-size:22px}.pill{display:inline-block;background:#e6f8f5;color:#08796e;border-radius:30px;padding:5px 10px;font-size:12px;font-weight:bold}
+footer{background:var(--navy);color:#e7edf5;padding:28px 18px;text-align:center;line-height:1.8}
+.modal{position:fixed;inset:0;background:#061326a8;display:none;align-items:center;justify-content:center;padding:18px;z-index:10}.modal.open{display:flex}.modal-box{background:white;border-radius:18px;padding:24px;width:min(480px,100%);max-height:90vh;overflow:auto}.modal-box h2{margin-top:0}.modal-box label{display:block;font-size:14px;font-weight:bold;margin:12px 0 6px}.modal-box input,.modal-box select,.modal-box textarea{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:9px;font:inherit}.modal-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.primary{background:var(--navy);color:white}.secondary{background:#e8eef6;color:var(--navy)}.notice{padding:12px;background:#fff6df;border:1px solid #f0d68a;border-radius:10px;color:#664b00;font-size:13px;line-height:1.5}.hidden{display:none!important}.item{padding:12px 0;border-bottom:1px solid #e5eaf1}.item:last-child{border:0}.small{font-size:12px}
+@media(max-width:600px){header{align-items:flex-start}.brand h1{max-width:240px}.hero{padding:30px 20px}.hero h2{font-size:29px}nav{width:100%}nav button{padding:8px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><div class="logo" aria-label="church logo placeholder">✝</div><h1 id="churchName">Gideon Pentecostu Prardhana Mandhiramu<small>Faith • Prayer • Fellowship</small></h1></div>
+  <nav><button onclick="scrollToId('services')" data-en="Service" data-te="ఆరాధన">Service</button><button onclick="scrollToId('library')" data-en="Media" data-te="మీడియా">Media</button><button onclick="scrollToId('events')" data-en="Events" data-te="కార్యక్రమాలు">Events</button><button onclick="openModal('memberModal')" data-en="Member Login" data-te="సభ్యుల లాగిన్">Member Login</button><button onclick="openModal('adminModal')" data-en="Admin" data-te="అడ్మిన్">Admin</button><button onclick="toggleLanguage()" id="langBtn">తెలుగు</button></nav>
+</header>
+<main>
+<section class="hero">
+  <div><span class="pill" style="background:#ffffff20;color:white">WELCOME • స్వాగతం</span><h2 data-en="A place for prayer, hope and fellowship" data-te="ప్రార్థన, నిరీక్షణ మరియు సహవాసానికి స్వాగతం">A place for prayer, hope and fellowship</h2><p data-en="Join us in worship and stay connected with our church family. Sermons, songs, events and live services will be shared here." data-te="ఆరాధనలో మాతో కలవండి. మన సంఘ కుటుంబంతో అనుసంధానంగా ఉండండి. ప్రసంగాలు, పాటలు, కార్యక్రమాలు మరియు ప్రత్యక్ష ఆరాధన వివరాలు ఇక్కడ పొందండి.">Join us in worship and stay connected with our church family. Sermons, songs, events and live services will be shared here.</p><button class="btn btn-primary" onclick="openModal('memberModal')" data-en="Member Sign In" data-te="సభ్యుల లాగిన్">Member Sign In</button> <button class="btn btn-light" onclick="scrollToId('contact')" data-en="Contact Church" data-te="సంఘాన్ని సంప్రదించండి">Contact Church</button></div>
+</section>
+<h2 class="section-title" id="services" data-en="Service Timings" data-te="ఆరాధన సమయాలు">Service Timings</h2>
+<div class="grid"><div class="card service"><div class="icon">⏰</div><div><h3 data-en="Sunday Morning Service" data-te="ఆదివారం ఉదయం ఆరాధన">Sunday Morning Service</h3><strong>9:30 AM – 1:30 PM</strong><p class="muted" data-en="Join us for worship and prayer." data-te="ఆరాధన మరియు ప్రార్థనలో మాతో పాల్గొనండి.">Join us for worship and prayer.</p></div></div><div class="card service"><div class="icon">📍</div><div><h3 data-en="Visit Us" data-te="మమ్మల్ని సందర్శించండి">Visit Us</h3><p class="muted">Kandregula, near Sachivalayam, Jaggampeta Mandal, Kakinada District, Andhra Pradesh – 533435</p></div></div></div>
+<h2 class="section-title" id="library" data-en="Sermons, Songs & Live" data-te="ప్రసంగాలు, పాటలు & ప్రత్యక్ష ప్రసారం">Sermons, Songs & Live</h2>
+<div class="grid"><div class="card"><div class="icon">▶️</div><h3 data-en="Sermons & Videos" data-te="ప్రసంగాలు & వీడియోలు">Sermons & Videos</h3><p class="muted" data-en="Church messages and teaching videos." data-te="సంఘ సందేశాలు మరియు బోధనా వీడియోలు.">Church messages and teaching videos.</p></div><div class="card"><div class="icon">🎵</div><h3 data-en="Worship Songs" data-te="ఆరాధన పాటలు">Worship Songs</h3><p class="muted" data-en="Songs and worship collections." data-te="పాటలు మరియు ఆరాధన సేకరణలు.">Songs and worship collections.</p></div><div class="card"><div class="icon">🔴</div><h3 data-en="Live Service" data-te="ప్రత్యక్ష ఆరాధన">Live Service</h3><p class="muted" data-en="The live stream link will be added by the church admin." data-te="ప్రత్యక్ష ప్రసార లింక్‌ను సంఘ అడ్మిన్ జోడిస్తారు.">The live stream link will be added by the church admin.</p><span class="pill" data-en="Coming soon" data-te="త్వరలో">Coming soon</span></div></div>
+<h2 class="section-title" id="events" data-en="Church Events" data-te="సంఘ కార్యక్రమాలు">Church Events</h2><div class="card"><p class="muted" data-en="Upcoming events will be announced here." data-te="రాబోయే సంఘ కార్యక్రమాల వివరాలు ఇక్కడ ప్రకటించబడతాయి.">Upcoming events will be announced here.</p><div id="connectionStatus" class="notice" role="status">Supabase connection is not configured yet. Follow README instructions.</div><div id="eventList"></div></div>
+<h2 class="section-title" data-en="Membership" data-te="సభ్యత్వం">Membership</h2><div class="grid"><div class="card"><span class="pill">FREE</span><h3 data-en="Free Member" data-te="ఉచిత సభ్యత్వం">Free Member</h3><p class="muted" data-en="Public announcements and free content." data-te="ప్రజా ప్రకటనలు మరియు ఉచిత కంటెంట్.">Public announcements and free content.</p></div><div class="card"><span class="pill">NO SUBSCRIPTION</span><h3 data-en="Free Church Access" data-te="ఉచిత సంఘ సమాచారం">Free Church Access</h3><p class="muted" data-en="Public church announcements and event details are free to view." data-te="సంఘ ప్రకటనలు మరియు కార్యక్రమాల వివరాలు ఉచితంగా చూడవచ్చు.">Public church announcements and event details are free to view.</p></div></div>
+<h2 class="section-title" id="contact" data-en="Contact & Location" data-te="సంప్రదింపు & చిరునామా">Contact & Location</h2><div class="card"><p><strong>📞 <a href="tel:+919701641283">+91 97016 41283</a></strong></p><p class="muted">Kandregula, near Sachivalayam, Jaggampeta Mandal, Kakinada District, Andhra Pradesh – 533435</p></div>
+</main>
+<footer><strong>Gideon Pentecostu Prardhana Mandhiramu</strong><br>+91 97016 41283<br>Kandregula • Jaggampeta Mandal • Kakinada District • 533435<br><span class="small">Website prototype • Backend and secure account services not yet connected</span></footer>
+
+<div class="modal" id="memberModal"><div class="modal-box"><h2 data-en="Member Login" data-te="సభ్యుల లాగిన్">Member Login</h2><p class="muted" data-en="Enter your registered phone number and the PIN provided by your church admin." data-te="మీ రిజిస్టర్ చేసిన ఫోన్ నంబర్ మరియు సంఘ అడ్మిన్ ఇచ్చిన PIN నమోదు చేయండి.">Enter your registered phone number and the PIN provided by your church admin.</p><label>Phone number / ఫోన్ నంబర్</label><input id="memberPhone" inputmode="tel" placeholder="10-digit mobile number"><label>Login PIN</label><input id="memberPin" type="password" inputmode="numeric" placeholder="PIN"><div class="modal-actions"><button class="primary" onclick="memberLogin()">Login</button><button class="secondary" onclick="openModal('registerModal')">Register / నమోదు</button><button class="secondary" onclick="closeModals()">Close</button></div><p id="memberMessage" class="muted"></p></div></div>
+<div class="modal" id="registerModal"><div class="modal-box"><h2>Member Registration / సభ్యుల నమోదు</h2><div class="notice">Demo form only. In the live website, registration will be sent to the admin for approval. Never share your PIN publicly.</div><label>Full name / పూర్తి పేరు</label><input id="regName" placeholder="Your name"><label>Phone number / ఫోన్ నంబర్</label><input id="regPhone" inputmode="tel" placeholder="10-digit mobile number"><div class="modal-actions"><button class="primary" onclick="registerMember()">Submit Registration</button><button class="secondary" onclick="closeModals()">Close</button></div><p id="regMessage" class="muted"></p></div></div>
+<div class="modal" id="adminModal"><div class="modal-box">
+  <h2>Admin Login / అడ్మిన్ లాగిన్</h2>
+  <p class="muted">Sign in with your Supabase Admin email and password. Do not share your password.</p>
+  <label>Admin email</label><input id="adminEmail" type="email" autocomplete="username" placeholder="admin@example.com">
+  <label>Password</label><input id="adminPassword" type="password" autocomplete="current-password" placeholder="Your password">
+  <div class="modal-actions">
+    <button class="primary" onclick="adminLogin()">Secure Login</button>
+    <button class="secondary" onclick="adminLogout()">Logout</button>
+    <button class="secondary" onclick="closeModals()">Close</button>
+  </div>
+  <p id="adminMessage" class="muted" role="status"></p>
+  <div id="adminDashboard" class="hidden">
+    <hr><h3>Admin Dashboard / అడ్మిన్ డాష్‌బోర్డ్</h3>
+    <p class="muted">You are signed in. Only an approved admin can manage church events.</p>
+    <h3>Add event / కార్యక్రమం జోడించండి</h3>
+    <label>Event title / కార్యక్రమం పేరు</label><input id="eventTitle" maxlength="160" placeholder="Prayer meeting">
+    <label>Description / వివరాలు</label><textarea id="eventDescription" rows="3" maxlength="3000" placeholder="Event details"></textarea>
+    <label>Event date and time / తేదీ, సమయం</label><input id="eventDate" type="datetime-local">
+    <label>Location / ప్రదేశం</label><input id="eventLocation" maxlength="250" placeholder="Church">
+    <label style="display:flex;gap:8px;align-items:center"><input id="eventPublished" type="checkbox" style="width:auto"> Publish event now / ఇప్పుడే ప్రచురించండి</label>
+    <div class="modal-actions"><button class="primary" onclick="addEvent()">Save Event</button></div>
+    <p id="eventMessage" class="muted" role="status"></p>
+  </div>
+ </div></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script>
+// Browser-safe Supabase publishable key only. Never place a service_role/secret key in this file.
+const SUPABASE_URL = "https://bfpppyfnqujjaqcuuwyc.supabase.co";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_FaPd8Tf5hD-f4iiT5IW6FQ_9B4AjwLF";
+let supabaseClient = null;
+try { if (window.supabase && SUPABASE_URL.startsWith("https://") && !SUPABASE_URL.includes("PASTE_") && !SUPABASE_PUBLISHABLE_KEY.includes("PASTE_")) { supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY); } } catch (e) { console.error("Supabase setup error", e); }
+let lang='en';
+const $=id=>document.getElementById(id);
+function openModal(id){closeModals();$(id).classList.add('open')}
+function closeModals(){document.querySelectorAll('.modal').forEach(m=>m.classList.remove('open'))}
+function scrollToId(id){$(id).scrollIntoView({behavior:'smooth'})}
+function toggleLanguage(){lang=lang==='en'?'te':'en';document.querySelectorAll('[data-en]').forEach(el=>el.textContent=el.dataset[lang]);$('langBtn').textContent=lang==='en'?'తెలుగు':'English'}
+function getData(k){try{return JSON.parse(localStorage.getItem(k)||'[]')}catch(e){return []}}
+function setData(k,v){localStorage.setItem(k,JSON.stringify(v))}
+function registerMember(){let name=$('regName').value.trim(),phone=$('regPhone').value.replace(/\D/g,'');if(!name||phone.length<10){$('regMessage').textContent='Enter your name and valid phone number.';return}let p=getData('gideonPending');if(p.some(x=>x.phone===phone)){ $('regMessage').textContent='This number is already submitted.';return}p.push({name,phone,status:'Pending'});setData('gideonPending',p);$('regMessage').textContent='Demo submission saved on this device only. Admin approval is still required.'}
+function memberLogin(){let phone=$('memberPhone').value.replace(/\D/g,''),pin=$('memberPin').value;$('memberMessage').textContent='This prototype has no real member accounts yet. Please wait for the secure backend setup.'}
+async function adminLogin(){
+  const email=$('adminEmail').value.trim(), password=$('adminPassword').value;
+  if(!supabaseClient){$('adminMessage').textContent='Supabase is not configured. Check the project URL and publishable key.';return}
+  if(!email||!password){$('adminMessage').textContent='Enter your Admin email and password.';return}
+  $('adminMessage').textContent='Signing in…';
+  const {data,error}=await supabaseClient.auth.signInWithPassword({email,password});
+  if(error){$('adminMessage').textContent='Login failed. Check your email/password and Supabase Auth settings.';console.error(error);return}
+  const {data:profile,error:profileError}=await supabaseClient.from('profiles').select('role,status').eq('id',data.user.id).maybeSingle();
+  if(profileError || !profile || profile.role!=='admin' || profile.status!=='approved'){
+    await supabaseClient.auth.signOut();
+    $('adminMessage').textContent='This account is not an approved church admin. Ask the project owner to check your profile.';
+    console.error(profileError || 'Admin profile check failed'); return;
+  }
+  $('adminDashboard').classList.remove('hidden');
+  $('adminMessage').textContent='Secure Admin login successful.';
+  $('adminPassword').value='';
+  await renderEvents();
+}
+async function adminLogout(){
+  if(supabaseClient) await supabaseClient.auth.signOut();
+  $('adminDashboard').classList.add('hidden');
+  $('adminMessage').textContent='Signed out.';
+}
+async function addEvent(){
+  if(!supabaseClient){$('eventMessage').textContent='Supabase is not configured.';return}
+  const {data:{user}}=await supabaseClient.auth.getUser();
+  if(!user){$('eventMessage').textContent='Please sign in again.';return}
+  const {data:profile,error:profileError}=await supabaseClient.from('profiles').select('role,status').eq('id',user.id).maybeSingle();
+  if(profileError || !profile || profile.role!=='admin' || profile.status!=='approved'){
+    $('eventMessage').textContent='Admin permission check failed. Event was not saved.';return;
+  }
+  const title=$('eventTitle').value.trim();
+  const description=$('eventDescription').value.trim();
+  const rawDate=$('eventDate').value;
+  const location=$('eventLocation').value.trim();
+  const is_published=$('eventPublished').checked;
+  if(!title){$('eventMessage').textContent='Please enter an event title.';return}
+  const starts_at=rawDate ? new Date(rawDate).toISOString() : null;
+  const {error}=await supabaseClient.from('church_events').insert([{title,description,starts_at,location,is_published}]);
+  if(error){$('eventMessage').textContent='Could not save event. Check the church_events columns and RLS policies.';console.error(error);return}
+  $('eventTitle').value='';$('eventDescription').value='';$('eventDate').value='';$('eventLocation').value='';$('eventPublished').checked=false;
+  $('eventMessage').textContent='Event saved in Supabase.';
+  await renderEvents();
+}
+async function renderEvents(){
+  if (supabaseClient) {
+    $('connectionStatus').textContent='Connecting to Supabase…';
+    const { data, error } = await supabaseClient.from('church_events').select('title, description, starts_at, location').eq('is_published', true).order('starts_at', { ascending: true });
+    if (error) { $('connectionStatus').textContent='Supabase query failed. Check the Project URL, Publishable Key, Data API, and RLS policies.'; console.error(error); return; }
+    $('connectionStatus').textContent='Connected to Supabase. Showing published church events.';
+    $('eventList').innerHTML = data && data.length ? data.map(x=>`<div class="item"><strong>${escapeHtml(x.title)}</strong> <span class="muted">${escapeHtml(x.starts_at ? new Date(x.starts_at).toLocaleString() : '')}</span><p>${escapeHtml(x.description||'')}</p>${x.location ? `<span class="muted">${escapeHtml(x.location)}</span>` : ''}</div>`).join('') : '<p class="muted">No published events yet. Admin can publish events after secure admin login is configured.</p>';
+    return;
+  }
+  $('connectionStatus').textContent='Supabase is not configured. Add your Project URL and Publishable Key in the setup section of this file.';
+  let e=getData('gideonEvents');$('eventList').innerHTML=e.length?e.map(x=>`<div class="item"><strong>${escapeHtml(x.title)}</strong> <span class="muted">${escapeHtml(x.date||'')}</span></div>`).join(''):'<p class="muted">Upcoming events will be announced here.</p>'
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+renderEvents();
+</script>
+</body></html>
